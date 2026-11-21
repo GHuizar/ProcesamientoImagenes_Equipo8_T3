@@ -1,0 +1,13 @@
+# Datos descargados por torchvision (se descargan solos al ejecutar el script)
+data/
+
+# Python
+__pycache__/
+*.pyc
+
+# Archivos auxiliares de LaTeX
+reporte/*.aux
+reporte/*.log
+reporte/*.out
+reporte/*.toc
+reporte/build*.log

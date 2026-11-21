@@ -1,0 +1,16 @@
+{
+  "knn_pixeles": {
+    "precision_prueba": 0.9692,
+    "tiempo_ajuste_s": 0.20590668200009077,
+    "tiempo_prediccion_s": 10.61364766500003,
+    "dimension_rasgos": 784
+  },
+  "hog_svm_lineal": {
+    "precision_prueba": 0.9723,
+    "tiempo_extraccion_hog_s": 10.106166779999967,
+    "tiempo_ajuste_s": 48.64890177799998,
+    "tiempo_prediccion_s": 0.01726471599999968,
+    "dimension_rasgos": 324,
+    "parametros": 3250
+  }
+}

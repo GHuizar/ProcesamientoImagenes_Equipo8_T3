@@ -1,0 +1,534 @@
+{
+  "configuracion": {
+    "epochs": 10,
+    "batch_size": 128,
+    "lr": 0.001,
+    "seed": 42,
+    "val_size": 5000,
+    "data_dir": "data",
+    "fig_dir": "figuras",
+    "out_dir": "resultados"
+  },
+  "entorno": {
+    "pytorch": "2.15.0+cu132",
+    "python": "3.13.18",
+    "dispositivo": "cpu",
+    "hilos_cpu": 2,
+    "procesador": "x86_64"
+  },
+  "parametros_totales": 421642,
+  "parametros_entrenables": 421642,
+  "capas": [
+    {
+      "capa": "bloque1.0",
+      "tipo": "Conv2d",
+      "salida": [
+        32,
+        28,
+        28
+      ],
+      "parametros": 320
+    },
+    {
+      "capa": "bloque1.1",
+      "tipo": "ReLU",
+      "salida": [
+        32,
+        28,
+        28
+      ],
+      "parametros": 0
+    },
+    {
+      "capa": "bloque1.2",
+      "tipo": "MaxPool2d",
+      "salida": [
+        32,
+        14,
+        14
+      ],
+      "parametros": 0
+    },
+    {
+      "capa": "bloque2.0",
+      "tipo": "Conv2d",
+      "salida": [
+        64,
+        14,
+        14
+      ],
+      "parametros": 18496
+    },
+    {
+      "capa": "bloque2.1",
+      "tipo": "ReLU",
+      "salida": [
+        64,
+        14,
+        14
+      ],
+      "parametros": 0
+    },
+    {
+      "capa": "bloque2.2",
+      "tipo": "MaxPool2d",
+      "salida": [
+        64,
+        7,
+        7
+      ],
+      "parametros": 0
+    },
+    {
+      "capa": "clasificador.0",
+      "tipo": "Flatten",
+      "salida": [
+        3136
+      ],
+      "parametros": 0
+    },
+    {
+      "capa": "clasificador.1",
+      "tipo": "Linear",
+      "salida": [
+        128
+      ],
+      "parametros": 401536
+    },
+    {
+      "capa": "clasificador.2",
+      "tipo": "ReLU",
+      "salida": [
+        128
+      ],
+      "parametros": 0
+    },
+    {
+      "capa": "clasificador.3",
+      "tipo": "Dropout",
+      "salida": [
+        128
+      ],
+      "parametros": 0
+    },
+    {
+      "capa": "clasificador.4",
+      "tipo": "Linear",
+      "salida": [
+        10
+      ],
+      "parametros": 1290
+    }
+  ],
+  "precision_entrenamiento": 0.9981818181818182,
+  "perdida_entrenamiento": 0.006546573727179996,
+  "precision_validacion": 0.9918,
+  "perdida_validacion": 0.033396141976118086,
+  "precision_prueba": 0.9937,
+  "perdida_prueba": 0.022907812998164447,
+  "errores_prueba": 63,
+  "tiempo_entrenamiento_s": 251.0762474349999,
+  "tiempo_inferencia_prueba_s": 2.6150633040001594,
+  "por_clase": [
+    {
+      "clase": 0,
+      "precision": 0.9959225280326198,
+      "recall": 0.996938775510204,
+      "f1": 0.9964303926568078,
+      "soporte": 980
+    },
+    {
+      "clase": 1,
+      "precision": 0.9973568281938326,
+      "recall": 0.9973568281938326,
+      "f1": 0.9973568281938326,
+      "soporte": 1135
+    },
+    {
+      "clase": 2,
+      "precision": 0.997078870496592,
+      "recall": 0.9922480620155039,
+      "f1": 0.9946576007770762,
+      "soporte": 1032
+    },
+    {
+      "clase": 3,
+      "precision": 0.996031746031746,
+      "recall": 0.994059405940594,
+      "f1": 0.9950445986124876,
+      "soporte": 1010
+    },
+    {
+      "clase": 4,
+      "precision": 0.9908998988877654,
+      "recall": 0.9979633401221996,
+      "f1": 0.9944190766108574,
+      "soporte": 982
+    },
+    {
+      "clase": 5,
+      "precision": 0.9855072463768116,
+      "recall": 0.9910313901345291,
+      "f1": 0.9882615986584684,
+      "soporte": 892
+    },
+    {
+      "clase": 6,
+      "precision": 0.9968652037617555,
+      "recall": 0.9958246346555324,
+      "f1": 0.9963446475195823,
+      "soporte": 958
+    },
+    {
+      "clase": 7,
+      "precision": 0.98747591522158,
+      "recall": 0.9970817120622568,
+      "f1": 0.9922555663117134,
+      "soporte": 1028
+    },
+    {
+      "clase": 8,
+      "precision": 0.9917864476386037,
+      "recall": 0.9917864476386037,
+      "f1": 0.9917864476386037,
+      "soporte": 974
+    },
+    {
+      "clase": 9,
+      "precision": 0.9969818913480886,
+      "recall": 0.9821605550049554,
+      "f1": 0.9895157264103844,
+      "soporte": 1009
+    }
+  ],
+  "macro": {
+    "precision": 0.9935906575989394,
+    "recall": 0.9936451151278212,
+    "f1": 0.9936072483389815
+  },
+  "matriz_confusion": [
+    [
+      977,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      1132,
+      0,
+      0,
+      0,
+      1,
+      0,
+      2,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1024,
+      0,
+      2,
+      0,
+      0,
+      6,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1004,
+      0,
+      3,
+      0,
+      2,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      980,
+      0,
+      0,
+      0,
+      0,
+      2
+    ],
+    [
+      1,
+      0,
+      0,
+      4,
+      0,
+      884,
+      2,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      2,
+      0,
+      0,
+      1,
+      1,
+      954,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1025,
+      1,
+      0
+    ],
+    [
+      3,
+      0,
+      2,
+      0,
+      1,
+      1,
+      0,
+      0,
+      966,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      5,
+      7,
+      0,
+      2,
+      4,
+      991
+    ]
+  ],
+  "pares_mas_confundidos": [
+    {
+      "real": 9,
+      "predicha": 5,
+      "conteo": 7
+    },
+    {
+      "real": 2,
+      "predicha": 7,
+      "conteo": 6
+    },
+    {
+      "real": 9,
+      "predicha": 4,
+      "conteo": 5
+    },
+    {
+      "real": 9,
+      "predicha": 8,
+      "conteo": 4
+    },
+    {
+      "real": 5,
+      "predicha": 3,
+      "conteo": 4
+    },
+    {
+      "real": 8,
+      "predicha": 0,
+      "conteo": 3
+    },
+    {
+      "real": 3,
+      "predicha": 5,
+      "conteo": 3
+    },
+    {
+      "real": 9,
+      "predicha": 7,
+      "conteo": 2
+    },
+    {
+      "real": 8,
+      "predicha": 2,
+      "conteo": 2
+    },
+    {
+      "real": 6,
+      "predicha": 1,
+      "conteo": 2
+    }
+  ],
+  "ejemplos_correctos": [
+    {
+      "indice": 1121,
+      "real": 0,
+      "predicha": 0,
+      "confianza": 0.9978013634681702
+    },
+    {
+      "indice": 5336,
+      "real": 3,
+      "predicha": 3,
+      "confianza": 0.9999995231628418
+    },
+    {
+      "indice": 9766,
+      "real": 4,
+      "predicha": 4,
+      "confianza": 1.0
+    },
+    {
+      "indice": 7306,
+      "real": 5,
+      "predicha": 5,
+      "confianza": 1.0
+    },
+    {
+      "indice": 7695,
+      "real": 7,
+      "predicha": 7,
+      "confianza": 0.9999992847442627
+    }
+  ],
+  "ejemplos_incorrectos": [
+    {
+      "indice": 9729,
+      "real": 5,
+      "predicha": 6,
+      "confianza": 0.9993323683738708,
+      "prob_clase_real": 8.864559640642256e-05
+    },
+    {
+      "indice": 1014,
+      "real": 6,
+      "predicha": 5,
+      "confianza": 0.9990335702896118,
+      "prob_clase_real": 7.873763388488442e-05
+    },
+    {
+      "indice": 2654,
+      "real": 6,
+      "predicha": 1,
+      "confianza": 0.9988481998443604,
+      "prob_clase_real": 0.0006964878411963582
+    },
+    {
+      "indice": 4176,
+      "real": 2,
+      "predicha": 7,
+      "confianza": 0.9987180233001709,
+      "prob_clase_real": 0.0003244798572268337
+    },
+    {
+      "indice": 4740,
+      "real": 3,
+      "predicha": 5,
+      "confianza": 0.9886035919189453,
+      "prob_clase_real": 0.0046715764328837395
+    }
+  ],
+  "historial": [
+    {
+      "epoca": 1,
+      "perdida_entrenamiento": 0.27285914554921065,
+      "precision_entrenamiento": 0.9171090909090909,
+      "perdida_validacion": 0.06891852468252183,
+      "precision_validacion": 0.9798,
+      "segundos": 24.862766833000023
+    },
+    {
+      "epoca": 2,
+      "perdida_entrenamiento": 0.08931668599681421,
+      "precision_entrenamiento": 0.9736181818181818,
+      "perdida_validacion": 0.04834456890821457,
+      "precision_validacion": 0.9868,
+      "segundos": 23.007374647999995
+    },
+    {
+      "epoca": 3,
+      "perdida_entrenamiento": 0.0639135534384034,
+      "precision_entrenamiento": 0.9807636363636364,
+      "perdida_validacion": 0.048201733827590944,
+      "precision_validacion": 0.986,
+      "segundos": 24.101189387999966
+    },
+    {
+      "epoca": 4,
+      "perdida_entrenamiento": 0.05408121232769706,
+      "precision_entrenamiento": 0.9837090909090909,
+      "perdida_validacion": 0.04265632517635822,
+      "precision_validacion": 0.9876,
+      "segundos": 24.54838281100001
+    },
+    {
+      "epoca": 5,
+      "perdida_entrenamiento": 0.044598140142180706,
+      "precision_entrenamiento": 0.9870363636363636,
+      "perdida_validacion": 0.03674318641424179,
+      "precision_validacion": 0.9898,
+      "segundos": 23.890834677000043
+    },
+    {
+      "epoca": 6,
+      "perdida_entrenamiento": 0.03837300182364204,
+      "precision_entrenamiento": 0.988,
+      "perdida_validacion": 0.037061596661806105,
+      "precision_validacion": 0.988,
+      "segundos": 25.65235256400001
+    },
+    {
+      "epoca": 7,
+      "perdida_entrenamiento": 0.033333514158969575,
+      "precision_entrenamiento": 0.9898363636363636,
+      "perdida_validacion": 0.03582092560827732,
+      "precision_validacion": 0.9898,
+      "segundos": 26.697598941000024
+    },
+    {
+      "epoca": 8,
+      "perdida_entrenamiento": 0.030283515677804296,
+      "precision_entrenamiento": 0.9905090909090909,
+      "perdida_validacion": 0.04143894240260124,
+      "precision_validacion": 0.9896,
+      "segundos": 26.923750120000022
+    },
+    {
+      "epoca": 9,
+      "perdida_entrenamiento": 0.026199794579635966,
+      "precision_entrenamiento": 0.9912909090909091,
+      "perdida_validacion": 0.041404347866773605,
+      "precision_validacion": 0.9908,
+      "segundos": 26.075265383999977
+    },
+    {
+      "epoca": 10,
+      "perdida_entrenamiento": 0.024731499787149103,
+      "precision_entrenamiento": 0.9920545454545454,
+      "perdida_validacion": 0.033396141976118086,
+      "precision_validacion": 0.9918,
+      "segundos": 25.315875398000117
+    }
+  ]
+}

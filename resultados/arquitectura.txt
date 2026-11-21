@@ -1,0 +1,36 @@
+CNNSencilla(
+  (bloque1): Sequential(
+    (0): Conv2d(1, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU()
+    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (bloque2): Sequential(
+    (0): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU()
+    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (clasificador): Sequential(
+    (0): Flatten(start_dim=1, end_dim=-1)
+    (1): Linear(in_features=3136, out_features=128, bias=True)
+    (2): ReLU()
+    (3): Dropout(p=0.5, inplace=False)
+    (4): Linear(in_features=128, out_features=10, bias=True)
+  )
+)
+
+Capa              Tipo        Forma de salida       Parámetros
+--------------------------------------------------------------
+bloque1.0         Conv2d      [32, 28, 28]                 320
+bloque1.1         ReLU        [32, 28, 28]                   0
+bloque1.2         MaxPool2d   [32, 14, 14]                   0
+bloque2.0         Conv2d      [64, 14, 14]              18,496
+bloque2.1         ReLU        [64, 14, 14]                   0
+bloque2.2         MaxPool2d   [64, 7, 7]                     0
+clasificador.0    Flatten     [3136]                         0
+clasificador.1    Linear      [128]                    401,536
+clasificador.2    ReLU        [128]                          0
+clasificador.3    Dropout     [128]                          0
+clasificador.4    Linear      [10]                       1,290
+--------------------------------------------------------------
+Parámetros totales: 421,642
+Parámetros entrenables: 421,642
