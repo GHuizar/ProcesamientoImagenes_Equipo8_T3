@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Tarea 6 - Comparación con métodos clásicos (complemento de la Parte II).
+Equipo 8 - Tarea 3 - Comparación con métodos clásicos (complemento de la Parte II).
 
 Entrena dos clasificadores "clásicos" sobre exactamente las mismas 55 000
 imágenes de entrenamiento que la CNN y los evalúa en las mismas 10 000

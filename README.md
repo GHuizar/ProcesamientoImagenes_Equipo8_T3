@@ -1,4 +1,4 @@
-# Tarea 3 — Inteligencia Artificial en el Procesamiento de Imágenes
+# Equipo 8 - Tarea 3 — Inteligencia Artificial en el Procesamiento de Imágenes
 
 **Universidad Autónoma de Aguascalientes** · ICI 7°A
 **Materia:** Procesamiento de Imágenes · **Profesor:** Hermilo Sánchez Cruz

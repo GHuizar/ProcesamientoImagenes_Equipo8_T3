@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Tarea 6 - Inteligencia Artificial en el Procesamiento de Imágenes
+Equipo 8 - Tarea 3 - Inteligencia Artificial en el Procesamiento de Imágenes
 Parte III: Implementación práctica de una CNN sencilla para clasificar MNIST.
 
 Universidad Autónoma de Aguascalientes - ICI 7°A
